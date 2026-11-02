@@ -47,9 +47,8 @@ public class LoginStepsDef {
     @Entonces("valido en el popup la confirmación del producto agregado")
     public void valido_en_el_popup_la_confirmación_del_producto_agregado(){
         PopupSteps popupSteps = new PopupSteps(driver);
-        String title = popupSteps.getTitle();
         String expectedText = "Product successfully added to your shopping cart";
-        Assertions.assertEquals(expectedText, title);
+        Assertions.assertEquals(expectedText,popupSteps.getTitle());
     }
 
 }

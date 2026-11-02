@@ -17,4 +17,5 @@ public class PopupSteps {
     public String getAmmount(){
         return this.driver.findElement(PopupPage.popupAmmount).getText();
     }
+
 }
