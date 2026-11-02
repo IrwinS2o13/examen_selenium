@@ -4,9 +4,13 @@ package examen.stepsdefinitons;
 import examen.steps.AgregarSteps;
 import examen.steps.LoginSteps;
 import examen.steps.NavegacionSteps;
+import examen.steps.PopupSteps;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Y;
+import io.cucumber.java.es.Entonces;
+import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.WebDriver;
 
 import static examen.core.DriverManager.*;
@@ -40,4 +44,12 @@ public class LoginStepsDef {
         agregarSteps.agregar2items();
         screenShot();
     }
+    @Entonces("valido en el popup la confirmación del producto agregado")
+    public void valido_en_el_popup_la_confirmación_del_producto_agregado(){
+        PopupSteps popupSteps = new PopupSteps(driver);
+        String title = popupSteps.getTitle();
+        String expectedText = "Product successfully added to your shopping cart";
+        Assertions.assertEquals(expectedText, title);
+    }
+
 }

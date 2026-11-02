@@ -11,3 +11,4 @@ Característica: Login
     Y me logueo con mi usuario "racondorib@gmail.com" y clave "N0p455w0rd!26"
     Cuando navego a la categoria Clothes y subcategoria Men
     Y agrego 2 unidades del primer producto al carrito
+    Entonces valido en el popup la confirmación del producto agregado
