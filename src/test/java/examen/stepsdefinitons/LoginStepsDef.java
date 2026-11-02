@@ -22,7 +22,7 @@ public class LoginStepsDef {
         driver.get("https://qalab.bensg.com/store/en/");
         screenShot();
     }
-    @Y("me logueo con mi usuario XXX y clave YYY")
+    @Y("me logueo con mi usuario {string} y clave {string}")
     public void me_logueo_con_mi_usuario_XXX_y_clave_YYY(String user,  String password) {
         LoginSteps loginSteps = new LoginSteps(driver);
         loginSteps.ingresoUsuarioYClave(user,password);

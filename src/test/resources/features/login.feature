@@ -7,7 +7,7 @@ Característica: Login
 
   @test
   Escenario: Iniciar sesión
-    Dado que me encuentro en la página de login de Saucedemo
-    Cuando inicio sesión con las credenciales usuario: "standard_user" y contraseña: "secret_sauce"
-    Entonces valido que debería aparecer el título de "Products"
-    Y también valido que al menos exista un item
+    Dado estoy en la página de la tienda
+    Y me logueo con mi usuario "racondorib@gmail.com" y clave "N0p455w0rd!26"
+    Cuando navego a la categoria Clothes y subcategoria Men
+    Y agrego 2 unidades del primer producto al carrito
